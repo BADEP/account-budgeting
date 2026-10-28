@@ -1,7 +1,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import typing
-
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
@@ -62,7 +60,7 @@ class AccountBudgetPost(models.Model):
 class CrossoveredBudget(models.Model):
     _name = "crossovered.budget"
     _description = "Budget"
-    _inherit: typing.ClassVar[list[str]] = ["mail.thread"]
+    _inherit = ["mail.thread"]  # noqa: RUF012
 
     name = fields.Char(string="Budget Name", required=True)
     creating_user_id = fields.Many2one(
