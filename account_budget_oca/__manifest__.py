@@ -2,7 +2,7 @@
 
 {
     "name": "Budgets Management",
-    "version": "19.0.1.1.0",
+    "version": "20.0.1.0.0",
     "category": "Accounting",
     "license": "LGPL-3",
     "author": "Odoo S.A., Odoo Community Association (OCA)",
@@ -10,11 +10,11 @@
     "depends": ["account"],
     "excludes": ["account_budget"],
     "data": [
-        "security/ir.model.access.csv",
         "security/account_budget_security.xml",
         "views/account_analytic_account_views.xml",
         "views/account_budget_views.xml",
         "views/res_config_settings_views.xml",
+        "security/ir.access.csv",
     ],
     "demo": ["data/account_budget_demo.xml"],
 }
